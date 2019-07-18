@@ -17,5 +17,18 @@ public class DcController {
         System.out.println(services);
         return services;
     }
+    
+    //模拟超时，实现Hystrix服务降级
+    @GetMapping("/dc1")
+    public String dc1() {
+    	try {
+			Thread.sleep(5000L);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+        String services = "Services: " + discoveryClient.getServices();
+        System.out.println(services);
+        return services;
+    }
 
 }
