@@ -7,7 +7,7 @@ import org.springframework.cloud.netflix.turbine.stream.EnableTurbineStream;
 import org.springframework.context.annotation.Configuration;
 @Configuration
 @EnableAutoConfiguration
-//注解来启用Turbine Stream的配置
+//注解来启用Turbine Stream的配置，使用@EnableTurbine注解无效
 @EnableTurbineStream
 @EnableDiscoveryClient
 public class TurbineAmqpApplication {
