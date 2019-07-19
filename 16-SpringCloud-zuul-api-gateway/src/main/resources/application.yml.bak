@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: zuul-api-gateway
+
+server:
+  port: 1101
+
+eureka:
+  shouldFetchRegistry: false
+  validateInstanceId: false
+  client:
+    serviceUrl:
+      defaultZone: http\://localhost\:10001/eureka/
